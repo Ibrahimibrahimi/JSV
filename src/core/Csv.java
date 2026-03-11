@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Csv {
     String text = "", sepL = "\n", sepC = ",";
+    String[] head;
     ArrayList<String[]> data = new ArrayList<>();
 
     public Csv(String text) {
@@ -15,10 +16,11 @@ public class Csv {
          * if some lines has different number of columns (elements) , thatns means csv
          * not in best form
          */
+
         // extract
-        for (String line : this.text.split(sepL)) {
-            this.data.add(line.split(sepC));
-        }
+        head = this.text.split(sepL);
+        // add header
+
         // compare
         int ColsCount = this.data.get(0).length;
         for (int i = 0; i < this.data.size(); i++) {
@@ -31,5 +33,11 @@ public class Csv {
             }
         }
         return true;
+    }
+
+    public String[] getColData(String col) {
+        // search
+
+        return null;
     }
 }
