@@ -22,13 +22,14 @@ public class Csv {
         // compare
         int ColsCount = this.data.get(0).length;
         for (int i = 0; i < this.data.size(); i++) {
-            if (ColsCount == this.data.get(i).length){
-                System.out.println("LOADED....." + i + "/" + this.data.size() + " Lines");
-            }else {
+            if (ColsCount == this.data.get(i).length) {
+                System.out.println("LOADED....." + (i + 1) + "/" + this.data.size() + " Lines");
+            } else {
+                System.out.println("LOADED....." + (i + 1) + "/" + this.data.size() + " Lines");
+                System.out.println("ERROR : Null Value Found at line : " + (i + 1));
                 return false;
             }
         }
         return true;
     }
-    private void
 }
