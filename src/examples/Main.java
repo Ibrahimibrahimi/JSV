@@ -10,6 +10,5 @@ public class Main {
         Csv csv = new Csv(CsvContent);
 
         System.out.println(csv.isCorrect());
-
     }
 }
