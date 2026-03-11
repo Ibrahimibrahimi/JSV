@@ -1,0 +1,2 @@
+- check if count of cols of a line is different => not available(comming soon : replace by null)
+- add getType() and asType() to convert from csv to its correct form
