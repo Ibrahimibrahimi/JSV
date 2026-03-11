@@ -17,13 +17,16 @@ public class Csv {
          * not in best form
          */
 
-        // extract
         head = this.text.split(sepL);
-        // add header
+        for (int i = 0; i < this.text.split(sepL).length; i++) {
+            String line = this.text.split(sepL)[i];
+            String[] cols = line.split(sepC);
+            
+        }
 
         // compare
         int ColsCount = this.data.get(0).length;
-        for (int i = 0; i < this.data.size(); i++) {
+        for (int i = 1; i < this.data.size(); i++) {
             if (ColsCount == this.data.get(i).length) {
                 System.out.println("LOADED....." + (i + 1) + "/" + this.data.size() + " Lines");
             } else {
