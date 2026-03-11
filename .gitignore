@@ -1,1 +1,8 @@
 /bin/
+
+.classpath
+.git/
+.metadata/
+.project
+.settings/
+bin/
