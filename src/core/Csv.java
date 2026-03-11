@@ -21,16 +21,14 @@ public class Csv {
         for (int i = 0; i < this.text.split(sepL).length; i++) {
             String line = this.text.split(sepL)[i];
             String[] cols = line.split(sepC);
-            
+            this.data.add(cols); // add columns except header
         }
 
         // compare
         int ColsCount = this.data.get(0).length;
-<<<<<<< HEAD
-        for (int i = 0; i < this.data.size(); i++) {
-=======
+
         for (int i = 1; i < this.data.size(); i++) {
->>>>>>> D4vinci
+
             if (ColsCount == this.data.get(i).length) {
                 System.out.println("LOADED....." + (i + 1) + "/" + this.data.size() + " Lines");
             } else {
@@ -41,13 +39,10 @@ public class Csv {
         }
         return true;
     }
-<<<<<<< HEAD
-=======
 
     public String[] getColData(String col) {
         // search
 
         return null;
     }
->>>>>>> D4vinci
 }
