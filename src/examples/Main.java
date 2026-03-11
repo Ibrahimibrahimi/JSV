@@ -8,7 +8,9 @@ public class Main {
 
         String CsvContent = "id,name,note,gender\n1,ibrahim,15,Male\n2,ahmed,16.5,Male";
         Csv csv = new Csv(CsvContent);
-        
+
+        System.out.println(csv.isCorrect() ? "csv correct" : "csv broken");
+
         System.out.println(csv.isCorrect());
     }
 }
